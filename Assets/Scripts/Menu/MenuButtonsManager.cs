@@ -8,6 +8,7 @@ public class MenuButtonsManager : MonoBehaviour
     public List<GameObject>buttons;
     public float duration = 1f;
     public float delay = .1f;
+    public Ease ease = Ease.OutBack;
 
 
     void Awake()
@@ -32,7 +33,7 @@ public class MenuButtonsManager : MonoBehaviour
         {
             var b = buttons[i];
             b.SetActive(true);
-            b.transform.DOScale(1, duration).SetDelay(i*delay);
+            b.transform.DOScale(1, duration).SetDelay(i*delay).SetEase(ease).SetAutoKill(true);
             
         }
     }

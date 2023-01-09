@@ -2299,8 +2299,9 @@ MonoBehaviour:
   - {fileID: 4601671230296322014}
   - {fileID: 1185777382}
   - {fileID: 699729396}
-  duration: 0.8
+  duration: 0.5
   delay: 0.1
+  ease: 27
 --- !u!1 &1393194105
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,6 +4113,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4709233545131702414, guid: b1c1dbcff3bf47e4482c0c8f18549db2, type: 3}
       propertyPath: m_Name
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032639651539947056, guid: b1c1dbcff3bf47e4482c0c8f18549db2, type: 3}
+      propertyPath: m_text
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7860693171743611093, guid: b1c1dbcff3bf47e4482c0c8f18549db2, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7732376843384719338}
   - component: {fileID: 4061023742851680239}
   - component: {fileID: 7860693171743611093}
+  - component: {fileID: 1600344746}
   m_Layer: 5
   m_Name: PFB_Button
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5283019, b: 0.45490196, a: 0.45490196}
+  m_Color: {r: 0, g: 0.5283019, b: 0.45490196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -120,7 +121,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4061023742851680239}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1600344746}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1600344746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709233545131702414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037af192ab40bcf459fce7427d4a51d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6566133611045312073
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
