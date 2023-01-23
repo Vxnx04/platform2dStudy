@@ -8,6 +8,7 @@ public class EnemyBase : MonoBehaviour
     public int damage = 10;
     public Vector3 rotateLocation;
     public Rigidbody2D myRigidBody2D;
+    public BoxCollider2D boxCollider2D;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +17,7 @@ public class EnemyBase : MonoBehaviour
         if (health != null)
         {
             health.Damage(damage);
+            boxCollider2D.enabled = false;
             StartCoroutine(DeathAnimation());
         }
     }

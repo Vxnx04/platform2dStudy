@@ -39,9 +39,15 @@ public class Player : MonoBehaviour
        private void HandleMovement(){
 
         if(Input.GetKey(KeyCode.LeftControl))
+        {
         _currentSpeed = speedRun;
+            myAnimator.SetFloat("velocidade", 2f);
+        }
         else
+        {
         _currentSpeed = speed;
+            myAnimator.SetFloat("velocidade", 0f);            
+        }
 
             if (Input.GetKeyUp(KeyCode.LeftArrow))
             {
@@ -102,10 +108,12 @@ public class Player : MonoBehaviour
     {
         _isJumping = true;
         HandleScaleJump();
+        myAnimator.SetBool("isJumping", true);
         myRigidBody.velocity = Vector2.up * forceJump;
          yield return new WaitForSeconds(0.7f);
          myRigidBody.transform.localScale = Vector2.one;
          DOTween.Kill(myRigidBody.transform);
+        myAnimator.SetBool("isJumping", false);
         _isJumping = false;
     }
 }
