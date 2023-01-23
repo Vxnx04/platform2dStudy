@@ -39,15 +39,9 @@ public class Player : MonoBehaviour
        private void HandleMovement(){
 
         if(Input.GetKey(KeyCode.LeftControl))
-        {
         _currentSpeed = speedRun;
-            myAnimator.SetFloat("velocidade", 2f);
-        }
         else
-        {
         _currentSpeed = speed;
-            myAnimator.SetFloat("velocidade", 0f);            
-        }
 
             if (Input.GetKeyUp(KeyCode.LeftArrow))
             {
